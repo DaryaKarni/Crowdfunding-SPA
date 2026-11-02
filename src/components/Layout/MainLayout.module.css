@@ -1,0 +1,15 @@
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__content {
+  flex: 1;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 8rem 6.25rem;
+  box-sizing: border-box;
+}

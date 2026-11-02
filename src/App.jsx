@@ -1,10 +1,27 @@
+import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import HomePage from "./pages/Home/HomePage";
+import LocationsPage from "./pages/Locations/LocationsPage";
+import LoginPage from "./pages/Login/LoginPage";
+import {Routes, Route, Navigate} from 'react-router-dom';
+import ShopPage from "./pages/Shop/ShopPage";
+import ProjectDetailsPage from "./pages/ProjectDetails/ProjectDetailsPage";
+import MainLayout from "./components/Layout/MainLayout"
 
 export default function App() {
   return (
-  <div>
-    <h1>
-      This works
-    </h1>
-  </div>
+    <Routes>
+      <Route path='/login' element={<LoginPage/>} />
+      
+      <Route element={<ProtectedRoute />}>
+        <Route element={<MainLayout/>}>
+          <Route path='/' element={<HomePage/>}></Route>
+          <Route path='/locations' element={<LocationsPage/>}></Route>
+          <Route path='/shop' element={<ShopPage/>}></Route>
+          <Route path='/projects/:id' element={<ProjectDetailsPage />} />
+        </Route>
+      </Route>
+
+      <Route path='*' element={<Navigate to='/' replace/>}/>
+    </Routes>
   );
 }
