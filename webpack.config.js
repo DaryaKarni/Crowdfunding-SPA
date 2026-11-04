@@ -11,15 +11,20 @@ module.exports = {
     clean: true,
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+        type: 'javascript/auto',
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+            sourceType: "unambiguous"
+          }
         }
       },
       {

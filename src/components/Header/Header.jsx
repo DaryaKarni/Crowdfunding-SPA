@@ -1,15 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import './Header.module.css';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../features/auth/authSlice';
+import './Header.css';
 
 export default function Header(){
-  //temporary user data
-  const user = {
-    name: 'Darya',
-    avatar: 'https://dummyjson.com/icon/datya/1',
-  }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const user = useSelector((state) => state.auth.user);
+
   const handleLogout = () => {
-    //token cleanup - later 
-  }
+    dispatch(logout());
+    navigate('/login');
+  };
+
   return (
   <header className="header">
     <div className="header__container">
@@ -35,14 +39,19 @@ export default function Header(){
         <NavLink
           to="/shop"
           end
-          className = {({isActive}) => {
-            isActive ? 'header__link header__link--active' : 'header__link';
-          }}
+          className = {({isActive}) => 
+            isActive ? 'header__link header__link--active' : 'header__link'
+          }
         > Shop
         </NavLink>
+
       </nav>
       <div className="header__user">
+        {user ? (
+            <>
+          {user.image && (
           <img src={user.avatar} alt={user.name} className='header__avatar'/>
+           )}
           <button
             onCLick={handleLogout}
             className='header__logout-btn'
@@ -62,6 +71,12 @@ export default function Header(){
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
+           </>
+          ) : (
+             <NavLink to="/login" className="header__link">
+              Login
+            </NavLink>
+          )}
       </div>
     </div>
   </header>)

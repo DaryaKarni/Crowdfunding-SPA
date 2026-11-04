@@ -10,6 +10,7 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 8rem 6.25rem;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }

@@ -1,0 +1,9 @@
+
+
+.locations {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 6rem;
+}
