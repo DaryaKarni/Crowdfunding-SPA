@@ -72,6 +72,7 @@ export default function Header(){
 
           <div
             className="header__arrow-wrapper"
+            ref={dropdownRef}
             onMouseEnter={() => setIsDropdownOpen(true)}
             onMouseLeave={() => setIsDropdownOpen(false)}
           >
@@ -79,6 +80,7 @@ export default function Header(){
               type="button"
               className="header__arrow-btn"
               aria-label="Toggle user menu"
+              onClick={() => setIsDropdownOpen((prev) => !prev)}
             >
               <svg 
                 width="18"

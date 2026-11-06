@@ -1,0 +1,101 @@
+.filter-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 0.15s ease;
+}
+
+.filter-modal {
+  background: #ffffff;
+  width: 90%;
+  max-width: 440px;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.filter-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter-modal__header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.filter-modal__close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.filter-group {
+  margin-bottom: 18px;
+}
+
+.filter-group__title {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.filter-group__options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filter-option-btn {
+  background-color: #f3f4f6;
+  border: 1px solid transparent;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-option-btn.active {
+  background-color: #55a630;
+  color: #ffffff;
+}
+
+.filter-modal__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
+}
+
+.filter-modal__reset-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.filter-modal__apply-btn {
+  background-color: #55a630;
+  color: #ffffff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
