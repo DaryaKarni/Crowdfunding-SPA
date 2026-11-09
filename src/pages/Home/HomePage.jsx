@@ -1,24 +1,24 @@
 import { Link, useNavigate,  } from 'react-router-dom';
 import './HomePage.css';
 import { useGetProjectsQuery } from '../../api/dummyJsonApi';
+import image1 from '../../public/assets/home_image1.jpg'; 
+import image2 from '../../public/assets/home_image2.jpg';
+import image3 from '../../public/assets/home_image3.jpg';
 
 export default function HomePage(){
-  // const { data: projects = [], isLoading, isError } = useGetProjectsQuery();
-
-  // const featuredProjects = projects.slice(0, 3);
   const navigate = useNavigate();
   const defaultCards = [
     {
       description: 'Rent your own piece of farmland and watch your vegetables grow.', 
-      image: '/assets/home_image1.jpg'
+      image: image1
     },
     {
       description: 'Enjoy, year after year, the wonders of nature with your rented vegetable farmland (60 sqm / 30 sqm).', 
-      image: '/assets/home_image2.jpg',
+      image: image2,
     },
     {
       description: 'Grow your own piece of land, from planting seeds in the lush soil to harvesting your own vegetables.', 
-      image: '/assets/home_image3.jpg',
+      image: image3,
     },
   ];
 
