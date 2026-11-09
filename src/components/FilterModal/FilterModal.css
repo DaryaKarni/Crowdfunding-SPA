@@ -70,7 +70,7 @@
 }
 
 .filter-option-btn.active {
-  background-color: #55a630;
+  background-color: var(--color-green);
   color: #ffffff;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .filter-modal__apply-btn {
-  background-color: #55a630;
+  background-color: var(--color-green);
   color: #ffffff;
   border: none;
   padding: 8px 20px;

@@ -31,12 +31,12 @@
 }
 
 .custom-sort__button:hover {
-  border-color: #55a630;
+  border-color: var(--color-green);
   background-color: #f7faf5;
 }
 
 .custom-sort__button--open {
-  border-color: #55a630;
+  border-color: var(--color-green);
   box-shadow: 0 0 0 2px rgba(85, 166, 48, 0.2);
 }
 
@@ -48,7 +48,7 @@
 
 .custom-sort__chevron--rotated {
   transform: rotate(180deg);
-  color: #55a630;
+  color: var(--color-green);
 }
 
 .custom-sort__dropdown {
@@ -93,6 +93,6 @@
 
 .custom-sort__item--selected {
   background-color: #f0fdf4;
-  color: #2b7a0b;
+  color: var(--color-green-dark);
   font-weight: 700; 
 }

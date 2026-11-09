@@ -14,17 +14,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 8rem;
 }
 
 .home-screen__header {
   text-align: center;
   max-width: 900px;
   margin-bottom: 64px;
-  margin-top: 10vh;
 }
 
 .home-screen__title {
-  font-family: 'DM Serif Text', Georgia, 'Times New Roman', serif;
+  font-family: 'DM Serif Text';
   font-size: 2.8rem;
   font-weight: 400;
   line-height: 1.25;
@@ -35,7 +35,7 @@
 
 
 .home-screen__start-btn {
-  background-color: #63d321; 
+  background-color: var(--color-green); 
   color: #ffffff;
   border: 1px solid #3b8a10; 
   border-radius: 8px;
@@ -48,7 +48,7 @@
 }
 
 .home-screen__start-btn:hover {
-  background-color: #55b81a;
+  background-color: var(--color-green);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -116,7 +116,7 @@
   width: 36px;
   height: 36px;
   border: 3px solid rgba(99, 211, 33, 0.2);
-  border-top-color: #63d321;
+  border-top-color: var(--color-green);
   border-radius: 50%;
   animation: homeSpin 0.8s linear infinite;
   margin: 0 auto 12px;

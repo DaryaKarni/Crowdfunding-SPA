@@ -85,7 +85,7 @@
 }
 
 .login-form__input:focus {
-  border-color: #55a630;
+  border-color: var(--color-green);
   box-shadow: 0 0 0 3px rgba(85, 166, 48, 0.15);
 }
 
@@ -95,7 +95,7 @@
 }
 
 .login-form__submit-btn {
-  background-color: #55a630;
+  background-color: var(--color-green);
   color: #ffffff;
   border: none;
   padding: 12px;
@@ -111,15 +111,14 @@
 }
 
 .login-form__submit-btn:hover:not(:disabled) {
-  background-color: #438e24;
+  background-color: var(--color-green);
 }
 
 .login-form__submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
-
-/* Спиннер загрузки внутри кнопки */
+/* to reuseful*/
 .login-form__spinner {
   width: 20px;
   height: 20px;

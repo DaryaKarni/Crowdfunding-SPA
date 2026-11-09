@@ -16,7 +16,7 @@
 }
 
 .plot-card--selected {
-  border-color: #0088ff;
+  border-color: var(--color-green);
 }
 
 .plot-card__image-box {
@@ -81,7 +81,7 @@
 .plot-card__cube {
   width: 13px;
   height: 13px;
-  background-color: #4b662d;
+  background-color: var(--color-green-dark);
   background-image: radial-gradient(#607e3d 25%, transparent 25%);
   background-size: 4px 4px;
   border-radius: 2px;
@@ -111,7 +111,7 @@
 
 .plot-card__invest-btn {
   background-color: #f7faf5;
-  border: 1px solid #55a630;
+  border: 1px solid var(--color-green);
   color: #1e293b;
   font-size: 0.85rem;
   font-weight: 500;
@@ -122,14 +122,14 @@
 }
 
 .plot-card__invest-btn:hover {
-  background-color: #55a630;
+  background-color: var(--color-green);
   color: #ffffff;
 }
 
 .plot-card__reserve-btn {
   background: transparent;
   border: none;
-  color: #55a630;
+  color: var(--color-green);
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;

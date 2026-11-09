@@ -19,8 +19,8 @@
 }
 
 .filter-button--active {
-  border-color: #55a630;
-  color: #55a630;
+  border-color: var(--color-green);
+  color: var(--color-green);
   background-color: #f0fdf4;
 }
 
