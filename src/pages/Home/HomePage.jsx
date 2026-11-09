@@ -1,9 +1,8 @@
 import { Link, useNavigate,  } from 'react-router-dom';
 import './HomePage.css';
-import { useGetProjectsQuery } from '../../api/dummyJsonApi';
-import image1 from '../../public/assets/home_image1.jpg'; 
-import image2 from '../../public/assets/home_image2.jpg';
-import image3 from '../../public/assets/home_image3.jpg';
+import image1 from '../../../public/assets/home_image1.jpg'; 
+import image2 from '../../../public/assets/home_image2.jpg';
+import image3 from '../../../public/assets/home_image3.jpg';
 
 export default function HomePage(){
   const navigate = useNavigate();
