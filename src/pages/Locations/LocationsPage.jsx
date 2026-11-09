@@ -177,7 +177,7 @@ export default function LocationsPage() {
       </div>
       <div className="locations-map-container">
               <MapContainer
-                center={[51.8, 7.8]} // Центр между Дортмундом, Мюнстером и Билефельдом
+                center={[51.8, 7.8]} 
                 zoom={7}
                 scrollWheelZoom={true}
                 className="locations-leaflet-map"
@@ -187,10 +187,7 @@ export default function LocationsPage() {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
 
-                {/* Центрирование карты при клике на карточку */}
                 <MapRecenter selectedPlot={selectedPlot} />
-
-                {/* Маркеры для каждого проекта */}
                 {filteredProjects.map((plot) => (
                   <Marker
                     key={plot.id}
@@ -204,7 +201,11 @@ export default function LocationsPage() {
                       click: () => handleSelectPlot(plot.id),
                     }}
                   >
-                    <Popup>
+                    <Popup
+                      autoPan={true}
+                      autoPanPaddingTopLeft={[20, 80]}
+                      autoPanPaddingBottomRight={[20, 20]}
+                    >
                       <div className="map-popup-card">
                         <img
                           src={plot.image}

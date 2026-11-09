@@ -11,7 +11,7 @@ export const defaultMarkerIcon = L.divIcon({
   iconSize: [30, 38],
   iconAnchor: [15, 38],
   popupAnchor: [0, -36],
-}); 
+});
 
 export const selectedMarkerIcon = L.divIcon({
   className: 'custom-map-pin custom-map-pin--active',
