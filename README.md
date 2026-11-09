@@ -25,9 +25,11 @@ SPA for farmland and crowdfunding based on the Figma design. The platform allows
 
 Clone the repository and install project dependencies:
 
--git clone (https://github.com/DaryaKarni/Crowdfunding-SPA.git)
--cd Crowdfunding-SPA
--npm install
+git clone (https://github.com/DaryaKarni/Crowdfunding-SPA.git)
+
+cd Crowdfunding-SPA
+
+npm install
 
 ### Development Mode
 
