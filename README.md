@@ -66,7 +66,7 @@ Alternative valid DummyJSON account:
 - / - Protected home screen with hero presentation, primary call to action, and featured projects.
 - /locations - Protected screen combining searchable project list with an interactive map view.
 - /shop - Protected catalogue screen displaying investment cards in a responsive grid.
-- * - Fallback route redirecting unknown paths to the home view.
+- '*' Fallback route redirecting unknown paths to the home view.
 
 ## Core Features and Implementation
 
