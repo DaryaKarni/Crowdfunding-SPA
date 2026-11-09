@@ -2,13 +2,14 @@
 
 SPA for farmland and crowdfunding based on the Figma design. The platform allows users to explore available investment plots, search and filter listings and view opportunities on an interactive map.
 
+## Deploy
+[link to deploy](https://daryakarni.github.io/Crowdfunding-SPA/)
+
 ![Login Page image](image.png)
 ![Home Page image](image-2.png)
 ![Location Page image](image-3.png)
 ![Shop Page](image-1.png)
 
-## Deploy
-[link to deploy](https://daryakarni.github.io/Crowdfunding-SPA/)
 ## Tech Stack
 
 - React 19
