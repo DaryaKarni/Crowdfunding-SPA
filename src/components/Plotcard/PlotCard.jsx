@@ -13,8 +13,8 @@ import './PlotCard.css';
     };
 
   const handleInvest  = (e) => {
-    e.stopPropagation(); 
-    navigate(`/projects/${plot.id}`);
+    e.stopPropagation();
+    alert(`You've invested in #${plot.id} plot!`);
   };
 
   const handleReserve  = (e) => {

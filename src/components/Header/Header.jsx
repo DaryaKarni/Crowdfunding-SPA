@@ -67,7 +67,9 @@ export default function Header(){
       {user ? (
         <div className="header__user-row">
           {user.image && (
-            <img src={user.image} alt={user.firstName} className="header__avatar" />
+            <div className="header__avatar-wrapper">
+              <img src={user.image} alt={user.firstName} className="header__avatar" />
+            </div>
           )}
 
           <div

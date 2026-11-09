@@ -7,7 +7,9 @@
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .location-card:hover {
@@ -15,7 +17,6 @@
   transform: translateY(-2px);
 }
 
-/* Активное состояние синхронизации с маркером */
 .location-card--selected {
   border-color: #0088ff;
   box-shadow: 0 0 0 3px rgba(0, 136, 255, 0.15);
@@ -23,15 +24,16 @@
 
 .location-card__image-container {
   width: 100%;
-  height: 200px;
+  max-height: 300px;
+  aspect-ratio: 16 / 9;
   background-color: #e5ece0;
-  overflow: hidden;
 }
 
 .location-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .location-card__footer {

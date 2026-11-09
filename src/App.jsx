@@ -4,7 +4,6 @@ import LocationsPage from "./pages/Locations/LocationsPage";
 import LoginPage from "./pages/Login/LoginPage";
 import {Routes, Route, Navigate} from 'react-router-dom';
 import ShopPage from "./pages/Shop/ShopPage";
-import ProjectDetailsPage from "./pages/ProjectDetails/ProjectDetailsPage";
 import MainLayout from "./components/Layout/MainLayout"
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
           <Route path='/' element={<HomePage/>}></Route>
           <Route path='/locations' element={<LocationsPage/>}></Route>
           <Route path='/shop' element={<ShopPage/>}></Route>
-          <Route path='/projects/:id' element={<ProjectDetailsPage />} />
         </Route>
       </Route>
 

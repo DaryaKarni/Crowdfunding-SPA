@@ -4,6 +4,8 @@ import PlotCard from '../../components/PlotCard/PlotCard';
 import './ShopPage.css';
 import FilterModal from '../../components/FilterModal/FilterModal';
 import { useNavigate } from 'react-router-dom';
+import SortSelect from '../../components/SortSelect/SortSelect';
+import FilterButton from '../../components/FilterButton/FilterButton';
 
 export default function ShopPage() {
   const navigate = useNavigate();
@@ -11,8 +13,10 @@ export default function ShopPage() {
 
   const [sortOption, setSortOption] = useState('all'); 
   const [selectedCategory, setSelectedCategory] = useState('All');
-   const [selectedCountry, setSelectedCountry] = useState('All');
-   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState('All');
+  const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+  
+  const isFilterActive = selectedCategory !== 'All' || selectedCountry !== 'All';
 
   const categories = useMemo(() => {
     const list = new Set(projects.map((p) => p.category).filter(Boolean));
@@ -58,45 +62,15 @@ export default function ShopPage() {
           </div>
 
           <div className="shop-screen__controls">
-            <div className="shop-sort">
-              <label htmlFor="sort-dropdown" className="shop-sort__label">
-                Sort by
-              </label>
-              <select
-                id="sort-dropdown"
-                className="shop-sort__select"
-                value={sortOption}
-                onChange={(e) => setSortOption(e.target.value)}
-              >
-                <option value="all">All</option>
-                <option value="price_asc">Price: Low to High</option>
-                <option value="price_desc">Price: High to Low</option>
-              </select>
-            </div>
-
-            <button
-              type="button"
-              className={`shop-filter-btn ${
-                selectedCategory !== 'All' || selectedCountry !== 'All'
-                  ? 'shop-filter-btn--active'
-                  : ''
-              }`}
+            <SortSelect
+              id="shop-sort-select"
+              value={sortOption}
+              onChange={setSortOption}
+            />
+            <FilterButton
+              isActive = {isFilterActive}
               onClick={() => setIsFilterModalOpen(true)}
-            >
-              <span>Filter</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-              </svg>
-            </button>
+            />
 
             <button
               type="button"

@@ -18,13 +18,14 @@ export default function LocationCard({plot, isSelected, onSelect, ref}) {
           <h4 className='location-card__title'>{plot.title}</h4>
           <p className='location-card__country'>{plot.country}</p>
         </div>
-        <button>
+        <button
           type='button'
           className='location-card__shop-btn'
           onClick={(e) => {
             e.stopPropagation();
             navigate('/shop');
           }}
+          >
           Shop
         </button>
       </div>
