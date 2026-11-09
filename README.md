@@ -7,6 +7,8 @@ SPA for farmland and crowdfunding based on the Figma design. The platform allows
 ![Location Page image](image-3.png)
 ![Shop Page](image-1.png)
 
+## Deploy
+[link to deploy](https://daryakarni.github.io/Crowdfunding-SPA/)
 ## Tech Stack
 
 - React 19
