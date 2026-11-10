@@ -18,35 +18,29 @@ export default function ShopPage() {
   
   const isFilterActive = selectedCategory !== 'All' || selectedCountry !== 'All';
 
-  const categories = useMemo(() => {
-    const list = new Set(projects.map((p) => p.category).filter(Boolean));
-    return ['All', ...Array.from(list)];
-  }, [projects]);
+  const list = new Set(projects.map((p) => p.category).filter(Boolean));
+  const categories = ['All', ...Array.from(list)];
 
-  const filteredProjects = useMemo(() => {
-    let result = [...projects];
+  let filteredProjects = [...projects];
 
-    if (selectedCategory !== 'All') {
-      result = result.filter(
-        (plot) => plot.category?.toLowerCase() === selectedCategory.toLowerCase()
-      );
-    }
+  if (selectedCategory !== 'All') {
+    filteredProjects = filteredProjects.filter(
+      (plot) => plot.category?.toLowerCase() === selectedCategory.toLowerCase()
+    );
+  }
 
-    if (selectedCountry !== 'All') {
-      result = result.filter(
-        (p) => p.country?.toLowerCase() === selectedCountry.toLowerCase()
-      );
-    }
+  if (selectedCountry !== 'All') {
+    filteredProjects = filteredProjects.filter(
+      (p) => p.country?.toLowerCase() === selectedCountry.toLowerCase()
+    );
+  }
 
-    if (sortOption === 'price_asc') {
-      result.sort((a, b) => a.price - b.price);
-    } else if (sortOption === 'price_desc') {
-      result.sort((a, b) => b.price - a.price);
-    }
-
-    return result;
-  }, [projects, selectedCategory, selectedCountry, sortOption]);
-
+  if (sortOption === 'price_asc') {
+    filteredProjects.sort((a, b) => a.price - b.price);
+  } else if (sortOption === 'price_desc') {
+    filteredProjects.sort((a, b) => b.price - a.price);
+  }
+  
   const handleResetFilters = () => {
     setSelectedCategory('All');
     setSelectedCountry('All');
