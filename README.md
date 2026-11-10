@@ -2,6 +2,9 @@
 
 SPA for farmland and crowdfunding based on the Figma design. The platform allows users to explore available investment plots, search and filter listings and view opportunities on an interactive map.
 
+## Deploy
+[link to deploy](https://daryakarni.github.io/Crowdfunding-SPA/)
+
 ![Login Page image](image.png)
 ![Home Page image](image-2.png)
 ![Location Page image](image-3.png)
@@ -26,7 +29,9 @@ SPA for farmland and crowdfunding based on the Figma design. The platform allows
 Clone the repository and install project dependencies:
 
 git clone (https://github.com/DaryaKarni/Crowdfunding-SPA.git)
+
 cd Crowdfunding-SPA
+
 npm install
 
 ### Development Mode
@@ -61,7 +66,7 @@ Alternative valid DummyJSON account:
 - / - Protected home screen with hero presentation, primary call to action, and featured projects.
 - /locations - Protected screen combining searchable project list with an interactive map view.
 - /shop - Protected catalogue screen displaying investment cards in a responsive grid.
-- * - Fallback route redirecting unknown paths to the home view.
+- '*' Fallback route redirecting unknown paths to the home view.
 
 ## Core Features and Implementation
 
