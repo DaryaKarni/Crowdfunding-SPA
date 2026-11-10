@@ -95,7 +95,7 @@
 }
 
 .login-form__submit-btn {
-  background-color: var(--color-green);
+  background-color: var(--color-green-dark);
   color: #ffffff;
   border: none;
   padding: 12px;
@@ -111,7 +111,7 @@
 }
 
 .login-form__submit-btn:hover:not(:disabled) {
-  background-color: var(--color-green);
+  background-color: rgb(14, 95, 14);
 }
 
 .login-form__submit-btn:disabled {
