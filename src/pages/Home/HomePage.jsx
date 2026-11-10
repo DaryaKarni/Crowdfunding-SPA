@@ -48,6 +48,8 @@ export default function HomePage(){
                   src={obj.image}
                   alt={`home intro card image ${index + 1}`}
                   className="home-card__image"
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
 
                 <div className="home-card__badge">
