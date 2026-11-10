@@ -3,6 +3,7 @@
 SPA for farmland and crowdfunding based on the Figma design. The platform allows users to explore available investment plots, search and filter listings and view opportunities on an interactive map.
 
 ## Deploy
+
 [link to deploy](https://daryakarni.github.io/Crowdfunding-SPA/)
 
 ![Login Page image](image.png)
@@ -10,12 +11,16 @@ SPA for farmland and crowdfunding based on the Figma design. The platform allows
 ![Location Page image](image-3.png)
 ![Shop Page](image-1.png)
 
+## Lighthouse
+
+![Lighthouse indicators](image-4.png)
+
 ## Tech Stack
 
 - React 19
-- Webpack 
-- Babel 
-- React Router 
+- Webpack
+- Babel
+- React Router
 - Redux Toolkit
 - RTK Query
 - DummyJSON API
@@ -66,7 +71,7 @@ Alternative valid DummyJSON account:
 - / - Protected home screen with hero presentation, primary call to action, and featured projects.
 - /locations - Protected screen combining searchable project list with an interactive map view.
 - /shop - Protected catalogue screen displaying investment cards in a responsive grid.
-- '*' Fallback route redirecting unknown paths to the home view.
+- '\*' Fallback route redirecting unknown paths to the home view.
 
 ## Core Features and Implementation
 
